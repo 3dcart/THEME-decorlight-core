@@ -1,0 +1,209 @@
+<section id="home" class="home-page-content page-content">
+    <!--START: home_carousel-->
+    <section class="homepage-slider">
+        <div class="container">
+            <div class="homeCarousel fullwidth-slider flexslider" data-animation="[hc_effect]" data-slideshowspeed="[hc_delay]">
+                <ul class="slides">
+                    <!--START: carousel-->
+                    <li><a href="[link]"><img src="[image]" alt="" /></a></li>
+                    <!--END: carousel-->
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--END: home_carousel-->
+
+    <!--START: CATEGORY_HEADER-->
+    <section class="category-header">[CONTENT]</section>
+    <!--END: CATEGORY_HEADER-->
+
+    <section class="products-section wow fadeInUp">
+        <div class="container">
+            <!--START: FEATURE_MENU-->
+            <h2 class="page_heading">[category_Header-specials]</h2>
+
+            <!--START: CATEGORY_ITEMS-->
+            <div class="product-items product-items-[product-cols-number]">
+                <!--START: ITEM_TEMPLATE_0-->
+                [product_items]
+                <!--END: ITEM_TEMPLATE_0-->
+            </div>
+            <!--END: CATEGORY_ITEMS-->
+            <!--END: FEATURE_MENU-->
+        </div>
+    </section>
+    
+    <!--START: CATEGORY_FOOTER-->
+    <section class="category-footer">
+        <div class="container">[CONTENT]</div>
+    </section>
+    <!--END: CATEGORY_FOOTER-->
+            
+    <!--START: TOP_SELLERS_BLOCK-->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="page_heading">[frame_top-sellers] <span class="TSnav"></span></h2>
+            <div class="product-items product-items-4">
+                <div id="carousel-sellers" class="carousel slide">
+                    <!--START: topsellers-->
+                    <!--START: topsellers_topitem-->
+					[product_items]
+                    <!--END: topsellers_topitem-->
+					<!--START: topsellers_item-->
+					[product_items]
+                    <!--END: topsellers_item-->
+                    <!--END: topsellers-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END: TOP_SELLERS_BLOCK-->
+
+</section>
+
+<!--START: template_scripts-->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<script type="text/javascript" src="/assets/templates/common-core/lib/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    jQuery(function () {
+        jQuery('.homeCarousel').flexslider({
+            animation: jQuery(this).data('animation'),
+            slideshowSpeed: jQuery(this).data('slideshowSpeed'),
+            controlNav: false,
+            keyboard: false
+        });
+
+        jQuery('#carousel-sellers').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            appendArrows: jQuery('.TSnav'),
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+              {
+                  breakpoint: 1024,
+                  settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+                  }
+              },
+              {
+                  breakpoint: 600,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 2
+                  }
+              },
+              {
+                  breakpoint: 480,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                  }
+              }
+            ]
+        });
+    });
+
+</script>
+<!--END: template_scripts-->
+
+
+<!--START: template_styles-->
+<link rel="stylesheet" href="/assets/templates/common-core/lib/flexslider/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<style>
+    .TSnav {
+        float:right;
+        position: relative;
+    }
+    /* Arrows */
+    .slick-prev,
+    .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 0%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+    .slick-prev:hover,
+    .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        color: transparent;
+        outline: none;
+        background: transparent;
+    }
+    .slick-prev:hover:before,
+    .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+        opacity: 1;
+    }
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+        opacity: .25;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: "fontello";
+        font-size: 24px;
+        line-height: 1;
+        opacity: .75;
+        color: #502701;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-prev {
+        left: -40px;
+    }
+    [dir='rtl'] .slick-prev {
+        right: -0px;
+        left: auto;
+    }
+    .slick-prev:before {
+        content: '\f104';
+    }
+    [dir='rtl'] .slick-prev:before {
+        content: '\f105';
+    }
+
+    .slick-next {
+        right: 0px;
+    }
+    [dir='rtl'] .slick-next {
+        right: auto;
+        left: -40px;
+    }
+    .slick-next:before {
+        content: '\f105';
+    }
+    [dir='rtl'] .slick-next:before {
+        content: '\f104';
+    }
+	@media(max-width: 767px) {
+		.product-item.slick-slide {
+			width: 100% !important;
+			float: left !important;
+		}
+		div#carousel-sellers {
+			max-width: 270px;
+			margin: 0 auto;
+		}
+	}
+</style>
+<!--END: template_styles-->
