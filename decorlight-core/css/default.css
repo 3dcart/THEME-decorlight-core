@@ -26,6 +26,9 @@ h1 {
     font-weight: 600;
     letter-spacing: 0;
 }
+.mob-search{
+	display:none;
+}
 
 .subcategories {
     border-bottom: 1px solid #ececec;
@@ -1006,4 +1009,20 @@ iframe {
 		line-height: 1;
 		text-align: center;
 	}
+}
+
+@media(max-width:1023px){
+.mob-search{
+	display:block;
+	margin-bottom:15px;
+}
+.site-header .searchBox{
+	float:none;
+}
+.top-nav ul li:last-child {
+    display: none;
+}
+.top-nav ul li {
+    border-right: none;
+}
 }
