@@ -1032,6 +1032,8 @@ iframe {
 .category-footer img{
     max-width:100%;
 }
-.revealOnScroll {
-    opacity:0;
+@media(min-width: 768px) {
+    .revealOnScroll {
+        opacity:0;
+    }
 }
