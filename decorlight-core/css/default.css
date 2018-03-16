@@ -4,9 +4,9 @@
 
 body {
     /*font-family: 'Montserrat', sans-serif;*/
-	font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;
     color: #464646;
-	line-height: 1.5;
+    line-height: 1.5;
 }
 .primary-bg {
     background: #00afe7;
@@ -17,7 +17,7 @@ body {
     color: inherit;
 }
 h1 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 .titles {
@@ -25,6 +25,9 @@ h1 {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0;
+}
+.mob-search{
+    display:none;
 }
 
 .subcategories {
@@ -103,7 +106,7 @@ h1 {
 }
 .btn-default.btn-inverse:hover,
 .btn-primary:hover {
-	color: #fff;
+    color: #fff;
     background-color: #000;
     border-color: #000;
     opacity: 0.8;
@@ -127,8 +130,8 @@ h1 {
 }*/
 .navbar-inverse .navbar-nav > li > a {
     color: #222226;
-	font-weight: 400;
-	letter-spacing: 0.025em;
+    font-weight: 400;
+    letter-spacing: 0.025em;
     text-transform: uppercase;
     font-size: 13px;
     line-height: 20px;
@@ -355,14 +358,14 @@ span.cart-title {
     font-size: 12px;
     line-height: 15px;
     display: block;
-	font-weight: bold;
+    font-weight: bold;
 }
 span.cart-count {
     color: #676767;
     font-size: 10px;
     display: block;
     line-height: 15px;
-	font-weight: 500;
+    font-weight: 500;
 }
 .site-footer {
     border-top: 1px solid #e5e5e5;
@@ -428,14 +431,14 @@ ul.extrapages li a {
 }
 .mailist-box h3 {
     margin: 0 0 15px;
-	font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
 }
 .mailist-box p {
     margin: 0 0 15px;
-	font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     text-transform: none;
     font-weight: 400;
@@ -513,7 +516,7 @@ ul.social-icons li.social-icons-label {
     font-size: 18px;
     vertical-align: middle;
     /*font-family: 'Montserrat', sans-serif;*/
-	font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
     margin-right: 20px;
 }
@@ -924,7 +927,7 @@ span.freeshipping {
 /*
 Common page styles */
 .page_header {
-	margin: 0 0 30px;
+    margin: 0 0 30px;
 }
 .page_heading {
     margin: 0 0 0;
@@ -970,7 +973,7 @@ Common page styles */
     font-size: 36px;
 }
 .scrollToTop:hover{
-	text-decoration:none;
+    text-decoration:none;
     background-color: rgba(255, 255, 255, .8);
     -webkit-transition: opacity 1000ms ease-in-out;
     -moz-transition: opacity 1000ms ease-in-out;
@@ -990,20 +993,45 @@ iframe {
     padding-top: 20px;
 }
 @media(max-width: 1023px) {
-	.mailist-box {
-		border-right: none;
-	}
+    .mailist-box {
+        border-right: none;
+    }
 }
 @media(max-width: 767px) {
-	ul.extrapages li {
-		display: block;
-		border: none;
-		text-align: left;
-		padding: 0 20px;
-	}
-	.copyright_txt p {
-	    font-size: 14px;
-		line-height: 1;
-		text-align: center;
-	}
+    ul.extrapages li {
+        display: block;
+        border: none;
+        text-align: left;
+        padding: 0 20px;
+    }
+    .copyright_txt p {
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+    }
+}
+
+@media(max-width:1023px){
+.mob-search{
+    display:block;
+    margin-bottom:15px;
+}
+.site-header .searchBox{
+    float:none;
+}
+.top-nav ul li:last-child {
+    display: none;
+}
+.top-nav ul li {
+    border-right: none;
+}
+}
+.global-footer{
+    text-align:right;
+}
+.category-footer img{
+    max-width:100%;
+}
+.revealOnScroll {
+    opacity:0;
 }
