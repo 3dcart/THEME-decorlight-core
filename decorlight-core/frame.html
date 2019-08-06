@@ -142,7 +142,15 @@
 
             </div>
           <div class="mob-search">
-            
+            <div class="searchBox">
+                <form method="get" name="searchForm" action="search.asp">
+                    <div class="search-form">
+                        <input type="text" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
+                        <button type="submit" class="search-submit btn btn-default"><span class="icon-search"></span></button>
+                    </div>
+                </form>
+                <div class="clear"></div>
+            </div>
           </div>
         </div>
     </header>
@@ -277,31 +285,6 @@
     <!--START: quickview_modal-->
     [quickview_modal]
     <!--END: quickview_modal-->
-
-    <!-- Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="resetPWLabel">Store Search</h4>
-                </div>
-                <div class="modal-body">
-                    <div id="searchBox" class="searchBox">
-                        <form method="get" name="searchForm" action="search.asp">
-                            <div class="search-form">
-                                <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
-                                <button type="submit" class="search-submit btn btn-default btn-inverse"><span class="icon-search"></span></button>
-                            </div>
-                        </form>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
     <link rel="StyleSheet" href="assets/templates/common-core/lib/fontello/css/fontello.css" type="text/css" />
