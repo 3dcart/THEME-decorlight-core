@@ -2,19 +2,29 @@
 ** Bootstrap over-rides
 */
 
-html, body {
-  height: 100%;
-}
 body {
   display: flex;
   height: 100%;
   flex-direction: column;
+min-height: 100vh;
 }
-.page-content {
+.page-content,.grid-holder {
   flex: 1 0 auto;
 }
 footer {
   flex-shrink: 0;
+}
+.homepage-blog-posts .post-image-container img {
+    height: 230px;
+}
+.product-items.productList .product-item .img a {
+    position: initial;
+}
+@media (max-width: 991px){
+.product-items.productList .product-item .img {
+    padding-right: 0;
+    width: 32%;
+}
 }
 
 body {
@@ -693,7 +703,7 @@ span.freeshipping {
 */
 .products-section {
     background-color: #fff;
-    padding: 60px 0;
+    padding: 20px 0;
 }
 .products-section h2 {
     text-align: left;

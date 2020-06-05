@@ -14,198 +14,204 @@
     <!--END: home_carousel-->
 
     <!--START: CATEGORY_HEADER-->
-    <section class="category-header">
-      <div class="container">[CONTENT]</div>
+    <section class="category-header content-section">
+        <div class="container">
+            <div class="content tc-pagebuilder">[CONTENT]</div>
+        </div>
     </section>
     <!--END: CATEGORY_HEADER-->
 
+	<!--START: FEATURE_MENU-->
     <section class="products-section wow fadeInUp">
         <div class="container">
-            <!--START: FEATURE_MENU-->
+            
             <h2 class="page_heading">[category_Header-specials]</h2>
 
-            <!--START: CATEGORY_ITEMS-->
-            <div class="product-items product-items-[product-cols-number]">
-                <!--START: ITEM_TEMPLATE_0-->
-                [product_items]
-                <!--END: ITEM_TEMPLATE_0-->
-            </div>
-            <!--END: CATEGORY_ITEMS-->
-            <!--END: FEATURE_MENU-->
+			<div class="product-carousel flexslider">
+				<!--START: CATEGORY_ITEMS-->
+				<ul class="product-items slides" data-productcols="[product-cols-number]" >
+					<!--START: ITEM_TEMPLATE_0-->
+					<li>
+					[product_items]
+					</li>
+					<!--END: ITEM_TEMPLATE_0-->
+				</ul>
+				<!--END: CATEGORY_ITEMS-->
+			</div>
+            
         </div>
     </section>
-    
+	<!--END: FEATURE_MENU-->
+
+	<!--START: TOP_SELLERS_BLOCK-->
+	<div id="modTopSellers" class="products-section wow fadeInUp">
+		<div class="container">
+			<h2 class="page_heading">[frame_top-sellers]</h2>
+
+			<div class="product-carousel flexslider">
+				<ul class="product-items slides" data-productcols="[product-cols-number]" >
+					<!--START: topsellers-->
+					<!--START: topsellers_topitem-->
+					<li>
+						[product_items]
+					</li>
+					<!--END: topsellers_topitem-->
+
+					<!--START: topsellers_item-->
+					<li>
+						[product_items]
+					</li>
+					<!--END: topsellers_item-->
+					<!--END: topsellers-->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--END: TOP_SELLERS_BLOCK--> 
+
+	<!--START: NEW_RELEASES_BLOCK-->
+	<div id="modNewReleases" class="products-section wow fadeInUp">
+		<div class="container">
+			<h2 class="page_heading">[frame_new-releases]</h2>
+
+			<div class="product-carousel flexslider">
+				<ul class="product-items slides" data-productcols="[product-cols-number]" >
+					<!--START: newreleases-->
+					<!--START: newreleases_topitem-->
+					<li>
+						[product_items]
+					</li>
+					<!--END: newreleases_topitem-->
+
+					<!--START: newreleases_item-->
+					<li>
+						[product_items]
+					</li>
+					<!--END: newreleases_item-->
+					<!--END: newreleases-->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--END: NEW_RELEASES_BLOCK-->
+
+    <!--START: HOMEPAGE_BLOGS-->
+	<div class="homepage-blog-posts products-section">
+		<div class="container">
+            <h2 class="page_heading">[blog_recentposts]</h2>
+			<ul class="blogList clearfix">
+				<!--START: blog_post-->
+				<li class="blogPost [blog_class]">
+					<!--START: post_image-->
+					<div class="post-image">
+						<div class="post-image-container">
+							<a href="[pagename]" title="[subject]">  
+								<img src="[post_image]" alt="[subject]" class="img-responsive" />
+							</a>
+						</div>
+					</div>			            
+					<!--END: post_image-->
+					<div class="post-content">
+						<!--START: post_title-->
+						<h3><a href="[pagename]" title="[subject]">[subject]</a></h3>
+						<!--END: post_title-->
+
+						<div id="postContent" class="post" data-articleID="[post_id]">
+							[post]
+						</div>
+
+						<div class="post-info clearfix">
+							<div class="postDate">
+								[post_date]
+							</div>
+							<!--START: read-more-->
+							<div class="post-readmore">
+								<a href="[pagename]" title="[subject]" class="btn btn-default">[blog_read-more]</a>
+							</div>
+							<!--END: read-more-->
+						</div>
+					</div>
+				</li>
+				<!--END: blog_post-->
+			</ul>
+		</div>
+	</div>
+    <!--END: HOMEPAGE_BLOGS-->
+
     <!--START: CATEGORY_FOOTER-->
-    <section class="category-footer">
-        <div class="container">[CONTENT]</div>
+    <section class="category-footer content-section">
+        <div class="container">
+            <div class="content tc-pagebuilder">[CONTENT]</div>
+        </div>
     </section>
     <!--END: CATEGORY_FOOTER-->
-            
-    <!--START: TOP_SELLERS_BLOCK-->
-    <section class="products-section">
-        <div class="container">
-            <h2 class="page_heading">[frame_top-sellers] <span class="TSnav"></span></h2>
-            <div class="product-items product-items-4">
-                <div id="carousel-sellers" class="carousel slide">
-                    <!--START: topsellers-->
-                    <!--START: topsellers_topitem-->
-					[product_items]
-                    <!--END: topsellers_topitem-->
-					<!--START: topsellers_item-->
-					[product_items]
-                    <!--END: topsellers_item-->
-                    <!--END: topsellers-->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END: TOP_SELLERS_BLOCK-->
 
 </section>
 
 <!--START: template_scripts-->
 <script src="https://snapwidget.com/js/snapwidget.js"></script>
 <script type="text/javascript" src="/assets/templates/common-core/lib/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-
 <script type="text/javascript" charset="utf-8">
-    jQuery(function () {
-        jQuery('.homeCarousel').flexslider({
-            animation: jQuery(this).data('animation'),
-            slideshowSpeed: jQuery(this).data('slideshowSpeed'),
+	jQuery(function () {
+		
+		// Homepage Carousel
+		jQuery('.homeCarousel').flexslider({
+            animation: jQuery('.homeCarousel').attr('data-animation'),
+			slideshow: true,
+            slideshowSpeed: jQuery('.homeCarousel').attr('data-slideshowspeed'),
             controlNav: false,
             keyboard: false
         });
+		
+		// Product Scroll
+		// store the slider in a local variable
+		var $window = jQuery(window),
+			flexslider = { vars: {} };
 
-        jQuery('#carousel-sellers').slick({
-            dots: false,
-            infinite: false,
-            speed: 300,
-            appendArrows: jQuery('.TSnav'),
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-              {
-                  breakpoint: 1024,
-                  settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 3,
-                      infinite: true,
-                  }
-              },
-              {
-                  breakpoint: 600,
-                  settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 2
-                  }
-              },
-              {
-                  breakpoint: 480,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                  }
-              }
-            ]
-        });
-    });
+		// tiny helper function to add breakpoints
+		function getGridSize() {
+			var proCol = jQuery(".product-carousel > ul.slides").attr("data-productcols");
+			return (window.innerWidth <= 567) ? 1 :
+				   (window.innerWidth < 992) ? 2 : proCol;
+		}
 
+		$window.on("load", function () {
+			jQuery('.product-carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				keyboard: false,
+				itemWidth: 210,
+				itemMargin: 0,
+				minItems: getGridSize(), // use function to pull in initial value
+				maxItems: getGridSize() // use function to pull in initial value
+
+			});
+			
+			setTimeout(function () {
+				window.dispatchEvent(new Event('resize'));
+			}, 100);
+		});
+
+		// check grid size on resize event
+		$window.resize(function () {
+			var gridSize = getGridSize();
+
+			flexslider.vars.minItems = gridSize;
+			flexslider.vars.maxItems = gridSize;
+
+		});
+		jQuery(document).ready(function(){
+			setTimeout(function () {
+				window.dispatchEvent(new Event('resize'));
+			}, 1000);
+		});
+		
+	}());
+	
 </script>
 <!--END: template_scripts-->
 
-
 <!--START: template_styles-->
 <link rel="stylesheet" href="/assets/templates/common-core/lib/flexslider/flexslider.css" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-<style>
-    .TSnav {
-        float:right;
-        position: relative;
-    }
-    /* Arrows */
-    .slick-prev,
-    .slick-next {
-        font-size: 0;
-        line-height: 0;
-        position: absolute;
-        top: 0%;
-        display: block;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        cursor: pointer;
-        color: transparent;
-        border: none;
-        outline: none;
-        background: transparent;
-    }
-    .slick-prev:hover,
-    .slick-prev:focus,
-    .slick-next:hover,
-    .slick-next:focus {
-        color: transparent;
-        outline: none;
-        background: transparent;
-    }
-    .slick-prev:hover:before,
-    .slick-prev:focus:before,
-    .slick-next:hover:before,
-    .slick-next:focus:before {
-        opacity: 1;
-    }
-    .slick-prev.slick-disabled:before,
-    .slick-next.slick-disabled:before {
-        opacity: .25;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        font-family: "fontello";
-        font-size: 24px;
-        line-height: 1;
-        opacity: .75;
-        color: #502701;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .slick-prev {
-        left: -40px;
-    }
-    [dir='rtl'] .slick-prev {
-        right: -0px;
-        left: auto;
-    }
-    .slick-prev:before {
-        content: '\f104';
-    }
-    [dir='rtl'] .slick-prev:before {
-        content: '\f105';
-    }
-
-    .slick-next {
-        right: 0px;
-    }
-    [dir='rtl'] .slick-next {
-        right: auto;
-        left: -40px;
-    }
-    .slick-next:before {
-        content: '\f105';
-    }
-    [dir='rtl'] .slick-next:before {
-        content: '\f104';
-    }
-	@media(max-width: 767px) {
-		.product-item.slick-slide {
-			width: 100% !important;
-			float: left !important;
-		}
-		div#carousel-sellers {
-			max-width: 270px;
-			margin: 0 auto;
-		}
-	}
-</style>
+<link href="assets/templates/common-core/lib/contentbuilder/minimalist-blocks/content.min.css" rel="stylesheet" type="text/css" />
 <!--END: template_styles-->
