@@ -8,6 +8,21 @@ body {
   flex-direction: column;
 min-height: 100vh;
 }
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
 .page-content,.grid-holder {
   flex: 1 0 auto;
 }
@@ -692,7 +707,7 @@ span.freeshipping {
     background-color: #fff;
     padding: 20px 0;
 }
-.products-section h2 {
+.products-section h2,.products-section h1 {
     text-align: left;
     color: #000;
     font-size: 24px;
