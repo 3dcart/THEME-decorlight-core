@@ -1,7 +1,7 @@
 /*
 ** Bootstrap over-rides
 */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
 body {
   display: flex;
   height: 100%;
@@ -22,6 +22,12 @@ overflow:hidden;
 position:static;
 width:auto;
 height:auto;
+}
+.homeCarousel img {
+    width: 100%;
+}
+.antiCls { 
+    visibility: hidden; 
 }
 .page-content,.grid-holder {
   flex: 1 0 auto;
@@ -644,13 +650,13 @@ ul.social-icons li.social-icons-label {
     text-decoration: line-through;
 }
 .sale-price {
-    color: #d6a916;
+    color: #b30000;
 }
 del.original-price {
     font-weight: 500;
 }
 span.freeshipping {
-    color: #00a888;
+    color: #000;
 }
 .product-item .status span:before {
     content: "-";
